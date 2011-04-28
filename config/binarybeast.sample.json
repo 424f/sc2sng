@@ -1,6 +1,6 @@
 {
-    "username": "mail@424f.com",
-    "password": "UnZZPmFYHAyx",
+    "username": null,
+    "password": null,
     
     "tournament": {
         "title": "SC2SNG.com Tournament #%(id)s",
