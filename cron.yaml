@@ -1,0 +1,4 @@
+cron:
+- description: Crawling job
+  url: /crawl/
+  schedule: every 1 mins

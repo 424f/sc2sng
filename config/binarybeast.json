@@ -1,0 +1,18 @@
+{
+    "username": "mail@424f.com",
+    "password": "UnZZPmFYHAyx",
+    
+    "tournament": {
+        "title": "SC2SNG.com Tournament #%(id)s",
+        "location": "Battle.net"
+        "public": false,
+        "game": "StarCraft II",
+        "uploads": "optional",
+        "downloads": "enabled",
+        "max_teams": 8,
+        "team_mode": "1v1",
+        "elimination": "single",
+        "maps": "MLG"
+        
+    }
+}
