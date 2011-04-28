@@ -9,6 +9,10 @@ from django.utils import simplejson as json
 from google.appengine.ext import webapp, db
 from google.appengine.ext.webapp import util, template
 
+sys.path += [os.path.join(os.path.dirname(__file__), 'lib')]
+
+import appengine_utilities.sessions
+
 sys.path += [os.path.join(os.path.dirname(__file__), 'src')]
 
 class Tournament(db.Model):
@@ -32,15 +36,23 @@ class TournamentRegistration(db.Model):
     user_key = db.StringProperty(required=True)
     start_time = db.DateTimeProperty(required=True)
     end_time = db.DateTimeProperty(required=True)
+
+class BasicRequestHandler(webapp.RequestHandler):
+    def initialize(self, request, response):
+        webapp.RequestHandler.initialize(self, request, response)
+        self.session = appengine_utilities.sessions.Session()
     
-class MainHandler(webapp.RequestHandler):
+class MainHandler(BasicRequestHandler):
     def get(self):
-        self.response.out.write('Hey there.')
+        self.session['visited'] = self.session.get('visited', 0) + 1
+        self.response.out.write(self.session['visited'])
+        #self.response.out.write(template.render('templates/index.html', {}))
    
 
-def main():
+def main():   
+    debug = os.environ['SERVER_SOFTWARE'].startswith('Development/')
     application = webapp.WSGIApplication([('/', MainHandler)],
-                                         debug=True)
+                                         debug=debug)
     util.run_wsgi_app(application)    
 
 if __name__ == '__main__':
