@@ -1,0 +1,25 @@
+section#tournament-signup {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+section#tournament-signup > div {
+    
+}
+
+section#tournament-signup h2 {
+    margin-left: 0.5em;
+}
+
+div.labeled-select {
+
+}
+
+/* -- League icons -- */
+.masters-icon {
+    background-image: url(../../static/images/master.png);
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 0.5em;
+}
