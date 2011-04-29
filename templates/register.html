@@ -1,38 +1,40 @@
 {% extends "index.html" %}
 
 {% block content %}
-Registration foo bar
+<h1>Registration</h1>
 
-<form action="/register" method="post">
-    <div>
-        <label>Username</label>
-        <input name="username" type="text" value="{{form.username|escape}}">
-        {{form_errors.username}}
-    </div>
-   
-    
-    <div>        
-        <label>E-mail address</label>
-        <input name="email" type="text" value="{{form.email|escape}}">
-        {{form_errors.email}}
-    </div>
-    
-    <div>                
-        <label>Password</label>
-        <input name="password" type="password">        
-        {{form_errors.password}}
-    </div>
-    
-    <div>                
-        <label>Repeat password</label>
-        <input name="password_repeat" type="password">        
-        {{form_errors.password_repeat}}
-    </div>
-    
-    <div>
-        <input type="submit" value="Register!">
-    </div>
-    
-    
-</form>
+<section>
+    <form action="/register" method="post">
+        <div>
+            <label>Username</label>
+            <input name="username" type="text" value="{{form.username|escape}}">
+            {{form_errors.username}}
+        </div>
+       
+        
+        <div>        
+            <label>E-mail address</label>
+            <input name="email" type="text" value="{{form.email|escape}}">
+            {{form_errors.email}}
+        </div>
+        
+        <div>                
+            <label>Password</label>
+            <input name="password" type="password">        
+            {{form_errors.password}}
+        </div>
+        
+        <div>                
+            <label>Repeat password</label>
+            <input name="password_repeat" type="password">        
+            {{form_errors.password_repeat}}
+        </div>
+        
+        <div>
+            <input type="submit" value="Register!">
+        </div>
+        
+        
+    </form>
+</section>
 {% endblock %}

@@ -1,3 +1,130 @@
+/* -- Forms -- */
+input[type="text"], input[type="password"] {
+    padding: 4px;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 9pt;
+    font-weight: bold;
+    display: block;
+}
+
+/* -- Document -- */
+html {
+    background-color: #ccc;
+}
+
+body, td, p, input, selection {
+    font-family: 'PT Sans';
+    font-size: 12pt;
+}
+
+body {
+    width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1em 3em;
+    margin-top: 1em;
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 1.0);
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* -- Errors, warnings, messages -- */
+.error {
+    border: 1px solid #faa;
+    display: inline-block;
+    padding: 0.2em;
+    background: #ffcccc url(../icons/cross-button.png) no-repeat 5px center;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+/* -- Sections -- */
+header {
+    background-color: #36c;
+    margin-left: -3em;
+    margin-right: -3em;
+    margin-top: -1em;
+    padding-top: 1em;
+    text-align: center;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.user {
+    background-image: url(../icons/user.png);
+    background-repeat: no-repeat;
+    background-position: left middle;
+    padding-left: 18px;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 14pt;
+    text-shadow: 0px -1px #000;
+}
+
+nav {
+    margin-bottom: 1em;
+}
+
+nav {
+    font-size: 12pt;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav > a:before {
+    content: " | ";
+    text-decoration: none;
+}
+
+nav > a:first-child:before, nav a.user:before {
+    content: ""
+}
+
+nav .user-link {
+    float: right;
+    vertical-align: top;
+}
+
+section, article {
+    border-top: 1px solid #ccc;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+/* -- Headings -- */
+h1, h2, h3, h4, h5 {
+    margin-bottom: 0.5em;
+    font-family: 'Arvo';
+    margin-top: 1em;
+}
+
+h1 {
+    font-size: 22pt;
+}
+
+h2 {
+    font-size: 14pt;
+}
+
+/* -- Footer -- */
+footer {
+    border-top: 1px solid #ccc;
+    margin-top: 1em;
+    padding-top: 1em;
+    text-align: center;
+    color: #888;
+}
+
 section#tournament-signup {
     padding: 10px;
     border: 1px solid #ccc;
