@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block title %}{{user.name|escape}}{% endblock %}
+
+{% block content %}
+
+{% if error %}
+    <h1>Error</h1>
+    <p>{{error|escape}}</p>
+{% else %}
+    <h1>{{user.name|escape}}</h1>
+    <p><em>Member since:</em> 4/29/2011</p>
+    <p>...</p>
+{% endif %}
+
+{% endblock %}
