@@ -16,8 +16,13 @@
 
 <nav>
     <a>Tournaments</a>
-    <a>Create Account</a>
-    <a>Sign up</a>
+    
+    {% if session.user %}
+    <a href="logout/">Log out</a>
+    {% else %}
+    <a href="register/">Create Account</a>
+    <a href="login/">Log in</a>
+    {% endif %}
 </nav>
 
 <select>
