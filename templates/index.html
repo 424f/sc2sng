@@ -13,11 +13,11 @@
 </head>
 <body>
 <h1>StarCraft 2 SNG Tournaments</h1>
-
 <nav>
     <a>Tournaments</a>
     
     {% if session.user %}
+    <a href="account/">Account</a>
     <a href="logout/">Log out</a>
     {% else %}
     <a href="register/">Create Account</a>
@@ -26,8 +26,9 @@
 </nav>
 
 <select>
-    <option>North America</option>
-    <option>Europe</option>
+    {% for realm in config.site.realms.itervalues %}
+    <option value="{{realm.id|escape}}">{{realm.name|escape}}</option>
+    {% endfor %}
 </select>
 
 {% block content %}
