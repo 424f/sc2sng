@@ -1,0 +1,15 @@
+{
+    "title": "SC2SnG.com",
+
+    "realms": {
+        "eu": {
+            "id": "eu",
+            "name": "Europe"
+        },
+        
+        "na": {
+            "id": "na",
+            "name": "North America"
+        }
+    }
+}

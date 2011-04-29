@@ -6,7 +6,7 @@ import random
 from main import BasicRequestHandler
 from models import User
 
-class LoginHandler(BasicRequestHandler):
+class AccountHandler(BasicRequestHandler):
     def get(self):
         if self.session.get('user', None) is not None:
             self.redirect('/')
