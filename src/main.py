@@ -51,6 +51,7 @@ from handlers.logout import LogoutHandler
 from handlers.user_registration import UserRegistrationHandler, \
                                        SuccessfulRegistrationHandler       
 from handlers.account import AccountHandler                                       
+from handlers.user import UserProfileHandler
 
 def main():   
     debug = os.environ['SERVER_SOFTWARE'].startswith('Development/')
@@ -60,7 +61,8 @@ def main():
         ('/register/thanks/?', SuccessfulRegistrationHandler),
         ('/login/?', LoginHandler),
         ('/logout/?', LogoutHandler),
-        ('/account/?', AccountHandler)
+        ('/account/?', AccountHandler),
+        ('/user/(.*?)/?', UserProfileHandler)
     ]
     application = webapp.WSGIApplication(handlers, debug=debug)
     util.run_wsgi_app(application)    
